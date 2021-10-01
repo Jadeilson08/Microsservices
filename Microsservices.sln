@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Catalog.API\Catalog.API.csproj", "{92FDDE4C-D2B9-4C53-9671-DA8653B8EE4D}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0ED4A4AC-7C04-4502-A606-C961CFC378A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Basket.API\Basket.API.csproj", "{B6FF92AC-3312-4987-956F-391A6C96D96C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{92FDDE4C-D2B9-4C53-9671-DA8653B8EE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92FDDE4C-D2B9-4C53-9671-DA8653B8EE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92FDDE4C-D2B9-4C53-9671-DA8653B8EE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED4A4AC-7C04-4502-A606-C961CFC378A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED4A4AC-7C04-4502-A606-C961CFC378A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED4A4AC-7C04-4502-A606-C961CFC378A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED4A4AC-7C04-4502-A606-C961CFC378A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FF92AC-3312-4987-956F-391A6C96D96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FF92AC-3312-4987-956F-391A6C96D96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FF92AC-3312-4987-956F-391A6C96D96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FF92AC-3312-4987-956F-391A6C96D96C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
