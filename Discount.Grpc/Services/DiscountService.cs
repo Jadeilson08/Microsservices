@@ -37,9 +37,35 @@ namespace Discount.Grpc.Services
             var isSaved = await repository.CreateDiscount(coupon);
 
             if (!isSaved)
-                throw new RpcException(new Status(StatusCode.Internal, $"Discount Product {coupon.ProductName} Not Found"));
+                throw new RpcException(new Status(StatusCode.Internal, $"Discount Product {coupon.ProductName} Not Saved"));
 
             return mapper.Map<CouponModel>(coupon);
+        }
+
+        public override async Task<CouponModel> UpdateDiscount(UpdateDiscountRequest request, ServerCallContext context)
+        {
+            var coupon = mapper.Map<Coupon>(request.Coupon);
+
+            bool isUpdated = await repository.UpdateDiscount(coupon);
+
+            if (!isUpdated)
+                throw new RpcException(new Status(StatusCode.Internal, $"Discount Product {coupon.ProductName} Not Updated"));
+
+            return mapper.Map<CouponModel>(coupon);
+        }
+
+        public override async Task<DeleteDiscountResponse> DeleteDiscount(DeleteDiscountRequest request, ServerCallContext context)
+        {
+            var productName = request.ProductName;
+
+            var isDeleted = await repository.DeleteDiscount(productName);
+
+            var responde = new DeleteDiscountResponse
+            {
+                Success = isDeleted
+            };
+
+            return responde;
         }
     }
 }

@@ -28,7 +28,7 @@ message UpdateDiscountRequest{
 	CouponModel coupon = 1;
 }
 message DeleteDiscountRequest{
-	CouponModel coupon = 1;
+	string productName = 1;
 }
 message DeleteDiscountResponse{
 	bool success = 1;
